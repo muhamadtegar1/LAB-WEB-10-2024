@@ -17,9 +17,9 @@ _Untuk perintah yang dibungkus < > maka perintah tersebut diganti sesuai instruk
   ```
   git checkout -b <NIM>
   ```
-- Pindah ke folder berdasarkan NIM kalian
+- Buat folder sesuai dengan NIM kalian. 
   ```
-  cd H071211019
+  mkdir H071211019
   ```
 - Di dalam folder NIM kalian buat folder dengan nama "Tugas_<_no_tugas_>" tanpa tanda kutip. contoh: Tugas_01
 - Di dalam folder tugas tersebut, kalian menambahkan tugas yang telah kalian kerjakan.
