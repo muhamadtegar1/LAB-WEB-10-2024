@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>THE GOAT</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: white;
+        }
+
+        /* Sticky Navbar */
+        nav {
+            background-color: red;
+            color: white;
+            padding: 10px;
+            display: flex;
+            justify-content: center;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+        
+        nav a {
+            color: white;
+            text-decoration: none;
+            padding: 10px;
+            margin: 0 15px; 
+        }
+        
+
+        nav a:hover {
+            background-color: #666666;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+       /* Main content */
+        .main-content {
+            display: flex;
+            padding: 20px;
+            align-items: center; 
+            background-color: rgb(240, 240, 240);
+        }
+
+        /* Text section */
+        .text-section {
+            width: 50%;
+            display: flex;
+            flex-direction: column;
+            justify-content: center; 
+            padding-right: 20px;
+        }
+
+        /* Image section */
+        .image-section {
+            width: 50%;
+        }
+
+        /* Image inside image section */
+        .image-section img {
+            width: 100%;
+            height: auto; 
+        }
+
+        
+        /* Two columns */
+        .two-columns {
+            display: flex;
+            justify-content: space-between;
+            padding: 20px;
+        }
+
+        .column {
+            width: 48%;
+            text-align: justify;
+        }
+
+        /* Grid of six items */
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 20px;
+            padding: 20px;
+        }
+        
+        .grid-item {
+            padding-top: 100%; 
+            position: relative; 
+            overflow: hidden; 
+        }
+        
+        .grid-item img {
+            position: absolute; 
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            object-fit: cover; 
+        }
+        
+        /* Footer */
+        .footer {
+            background-color: #333;
+            color: white;
+            padding: 5px;
+            text-align: center;
+        }
+        
+        .two-columns-footer {
+            display: flex;
+            justify-content: space-between;
+            align-items: center; 
+            padding: 10px;
+        }
+        
+        .image-section-footer {
+            display: flex;
+            align-items: center;
+            justify-content: flex-start; 
+            width: 50%;
+        }
+        
+        .image-section-footer img {
+            width: 50px; 
+            height: auto; 
+            margin-right: 15px; 
+        }
+        
+        .text-section-footer {
+            width: 50%;
+            display: flex;
+            justify-content: flex-end; 
+            text-align: right; 
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .nav {
+                flex-direction: column;
+                align-items: center;
+            }
+
+            .nav a {
+                padding: 10px 0;
+                margin: 5px 0;
+                width: 100%;
+                text-align: center;
+            }
+           
+            .main-content, .two-columns {
+                flex-direction: column;
+            }
+
+            .text-section, .image-section {
+                width: 100%;
+                text-align: center;
+            }
+
+            .column {
+                width: 100%;
+            }
+
+            .grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+
+            .footer, .two-columns-footer, .image-section-footer, .text-section-footer {
+                flex-direction: column;
+            } 
+        }
+
+        @media (max-width: 480px) {
+            .grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Sticky Navigation -->
+    <nav>
+        <a href="#about">About</a>
+        <a href="#gallery">Gallery</a>
+        <a href="#contact">Contact</a>
+    </nav>
+    
+    <!-- Main content with text and image -->
+    <section class="main-content">
+        <div class="text-section">
+            <h4>Hola, I'm Cristiano Ronaldo</h4>
+            <h1><strong>I'm a Football Player from Portugal. I'm the GOAT</strong></h1>
+            <p><em>I don't chase records, but records follow me.</em></p>
+        </div>
+        <div class="image-section">
+            <img src="Foto/foto utama.jpg" alt="Placeholder Image">
+        </div>
+    </section>
+    
+    <center><h2 id="about">About</h2></center>
+    <!-- Two columns section -->
+    <section class="two-columns">
+        <div class="column">
+            <p>Cristiano Ronaldo, salah satu pemain sepak bola terhebat sepanjang masa, terus mencuri perhatian dunia. Meskipun usianya telah melewati 30-an, Ronaldo tetap menjadi bintang utama di klubnya, Al-Nassr, di Arab Saudi. Kemampuan mencetak gol yang luar biasa dan dedikasi tinggi terhadap olahraga membuatnya tetap relevan di level tertinggi. Koleksi trofinya yang mengilap, termasuk lima gelar Ballon d'Or dan empat gelar Liga Champions, menjadi bukti nyata kehebatannya.</p>
+        </div>
+        <div class="column">
+            <p>Selain prestasi di lapangan, Ronaldo juga dikenal sebagai sosok yang sangat memperhatikan kebugaran tubuh. Ia menjalani latihan yang ketat dan memiliki gaya hidup sehat. Hal ini membuatnya mampu tampil di level tertinggi hingga usia yang relatif lanjut. Ronaldo juga memiliki pengaruh yang besar di dunia sepak bola. Ia menjadi panutan bagi banyak pemain muda dan memiliki jutaan penggemar di seluruh dunia.</p>
+        </div>
+    </section>
+
+    <center><h2 id="gallery">Gallery</h2></center>
+    <!-- Grid of six items -->
+    <section class="grid">
+        <div class="grid-item">
+            <img src="Foto/galery1.jpg" alt="Gallery Image 1">
+        </div>
+        <div class="grid-item">
+            <img src="Foto/galery2.jpg" alt="Gallery Image 2">
+        </div>
+        <div class="grid-item">
+            <img src="Foto/galery3.jpg" alt="Gallery Image 3">
+        </div>
+        <div class="grid-item">
+            <img src="Foto/galery4.jpg" alt="Gallery Image 4">
+        </div>
+        <div class="grid-item">
+            <img src="Foto/galery5.jpg" alt="Gallery Image 5">
+        </div>
+        <div class="grid-item">
+            <img src="Foto/galery6.jpg" alt="Gallery Image 6">
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer" id="contact">
+        <div class="two-columns-footer">
+            <div class="image-section-footer">
+                <img src="Foto/logocr7.jpeg" alt="logo CR7">
+                <h3>CRISTIANO RONALDO</h3>
+            </div>
+            <div class="text-section-footer">
+                <p>Instagram : cristiano | Youtube : @cristiano</p>
+                
+            </div>
+        </div>
+    </footer>
+</body>
+</html>
