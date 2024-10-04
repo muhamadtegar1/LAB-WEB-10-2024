@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Praktikum 4</title>
+    <script>
+        let harga = prompt("Masukan Harga Barang : ");
+        let jenis = prompt("Masukan Jenis Barang (Elektronik, Pakaian, Makanan, Lainnya) : ")
+        let harga_setelah_disKon = 0;
+        let diskon = " ";
+        let adaJenis = true;
+
+        if (jenis.toLowerCase() == "elektronik") {
+            harga_setelah_disKon = 0.9 * harga;
+            diskon = "10%";
+        } else if (jenis.toLowerCase() == "pakaian") {
+            harga_setelah_disKon = 0.8 * harga;
+            diskon = "20%";
+        } else if (jenis.toLowerCase() == "makanan") {
+            harga_setelah_disKon = 0.95 * harga;
+            diskon = "5%";
+        } else if (jenis.toLowerCase() == "lainnya") {
+            harga_setelah_disKon = harga;
+            diskon = "Tidak ada";
+        } else {
+            adaJenis = false;
+        }
+
+        if (adaJenis == false) {
+            console.log("Jenis Barang Tidak Sesuai");
+        } else {
+            console.log("Harga awal : Rp" + harga);
+            console.log("Diskon : " + diskon);
+            console.log("Harga setelah diskon : Rp" + harga_setelah_disKon);
+        }
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

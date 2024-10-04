@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Praktikum 4</title>
+    <script>
+        const angka = Math.floor(Math.random() * 100) + 1;
+        let angkaTebakan = prompt("Masukan angka dari 1 - 100 : (angka acak = " + angka +")") ;
+        let percobaan = 1;
+
+        while (angkaTebakan != angka) {
+            if (angkaTebakan > angka) {
+                percobaan += 1;
+                console.log("Terlalu tinggi coba lagi!");
+                angkaTebakan = prompt("Terlalu tinggi coba lagi!. \nMasukan salah satu dari angka 1 sampai 100 : (angka acak = " + angka + ")");
+            } else if (angkaTebakan < angka) {
+                percobaan += 1;
+                console.log("Terlalu rendah coba lagi!");
+                angkaTebakan = prompt("Terlalu rendah coba lagi!. \n Masukan salah satu dari angka 1 sampai 100 : (angka acak = " + angka + ")");
+            }
+        }
+
+        console.log("Selamat Kamu Berhasil menebak angka " + angka + " dengan benar.");
+        console.log("Sebanyak " + percobaan + " kali percobaan.");
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

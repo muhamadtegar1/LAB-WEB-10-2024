@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Praktikum 4</title>
+    <script>
+        const hari = ["senin", "selasa", "rabu", "kamis", "jumat", "sabtu", "minggu"]
+
+        let hariIni = prompt("Masukan Hari Ini : ").toLowerCase();
+        let cekHari = prompt("Mau lompat berapa hari kedepan? ");
+        let indexHari = hari.indexOf(hariIni);
+        let hariValid = false;
+
+        for (let i = 0; i < hari.length; i++) {
+            if(hari[i] == hariIni.toLowerCase()) {
+                hariValid = true;
+                let hari_selanjutnya = (parseInt(indexHari) + parseInt(cekHari)) % 7;
+                console.log(cekHari + " hari selanjutnya adalah " + hari[hari_selanjutnya]);
+                break;
+            }
+        }
+    </script>
+</head>
+<body>
+    
+</body>
+</html>
