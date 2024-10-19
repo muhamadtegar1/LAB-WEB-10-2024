@@ -1,0 +1,80 @@
+.btn-clear{
+    outline: none;
+}
+.btn-clear:hover{
+    scale: 1.3;
+}
+#textPlayerBet{
+    cursor: pointer;
+}
+
+.enemy-sidebar {
+    width: 15vw;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+}
+
+.player-sidebar {
+    width: 15vw;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    right: 0;
+}
+
+.poker-table {
+    background-image: url('background.png');
+    background-size: cover;
+    background-position: center;
+}
+
+.bg-glass {
+    background: rgba(255, 255, 255, 0.2);
+    backdrop-filter: blur(10px);
+    outline: 2px solid white;
+    outline-offset: -2px;
+    box-shadow: 0 0 10px white;
+    color: white;
+}
+
+.bg-glass-danger {
+    background: rgba(255, 0, 0, 0.2);
+    backdrop-filter: blur(10px);
+    outline: 2px solid #dc3545;
+    outline-offset: -2px;
+    box-shadow: 0 0 10px #dc3545;
+    color: white;
+}
+
+@keyframes swipeDown {
+    from {
+        transform: translateY(-100%);
+        opacity: 0;
+    }
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+.no-spin::-webkit-outer-spin-button,
+.no-spin::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+.no-spin {
+    -moz-appearance: textfield;
+    -webkit-appearance: none;
+    appearance: none;
+}
+
+.swipe-down {
+    animation: swipeDown 0.5s ease-out forwards;
+}
+
+.swipe-down:hover{
+    scale: 1.05;
+}
